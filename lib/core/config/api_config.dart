@@ -1,3 +1,4 @@
 class ApiConfig {
-  static String home = '/home';
+  static String products = '/products';
+  static String search = '$products/search';
 }

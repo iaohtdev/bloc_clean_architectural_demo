@@ -15,7 +15,7 @@ class AppTextStyles {
         height: height,
         fontSize: fontSize ?? 14,
         decoration: decoration,
-        color: color ?? Colors.white,
+        color: color ?? Colors.black,
         fontWeight: fontWeight ?? FontWeight.w400,
         fontFamily: fontFamily ?? fontRegular);
   }
@@ -32,23 +32,8 @@ class AppTextStyles {
         height: height,
         fontSize: fontSize ?? 14,
         decoration: decoration,
-        color: color ?? Colors.white,
-        fontWeight: fontWeight ?? FontWeight.w400,
+        color: color ?? Colors.black,
+        fontWeight: fontWeight ?? FontWeight.w500,
         fontFamily: fontBold);
-  }
-
-  static TextStyle l1() {
-    return TextStyle(
-        fontFamily: AppTextStyles.fontBold, fontSize: 30, color: Colors.white);
-  }
-
-  static TextStyle l2() {
-    return TextStyle(
-        fontFamily: AppTextStyles.fontBold, fontSize: 26, color: Colors.white);
-  }
-
-  static TextStyle l3() {
-    return TextStyle(
-        fontFamily: AppTextStyles.fontBold, fontSize: 22, color: Colors.white);
   }
 }

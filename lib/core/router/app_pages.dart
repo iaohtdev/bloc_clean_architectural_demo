@@ -1,6 +1,8 @@
 import 'package:bloc_clean_architectural_demo/core/router/app_routes.dart';
 
 import 'package:flutter/material.dart';
+import 'package:bloc_clean_architectural_demo/presentation/views/favorites/favorites_screen.dart';
+import 'package:bloc_clean_architectural_demo/presentation/views/home/home_screen.dart';
 
 class AppPages {
   static Route? onGenerateRoute(RouteSettings settings) {
@@ -8,12 +10,16 @@ class AppPages {
       case Routes.home:
         return customPageRoute(
             pageBuilder: (context, animation, secondaryAnimation) =>
-                Container());
+                const HomeScreen());
+      case Routes.favorites:
+        return customPageRoute(
+            pageBuilder: (context, animation, secondaryAnimation) =>
+                const FavoritesScreen());
 
       default:
         return customPageRoute(
             pageBuilder: (context, animation, secondaryAnimation) =>
-                Container());
+                const HomeScreen());
     }
   }
 }

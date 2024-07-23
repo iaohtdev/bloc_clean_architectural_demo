@@ -1,35 +1,22 @@
-import 'package:bloc_clean_architectural_demo/core/theme/app_color.dart';
-import 'package:bloc_clean_architectural_demo/gen/assets.gen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 
 import 'package:flutter/material.dart';
+import 'package:bloc_clean_architectural_demo/presentation/widgets/app_loading.dart';
 
 class ImageHelper {
-  static Widget getNetworkImg(
-      {required String? imageUrl,
-      double? height,
-      double? width,
-      Widget? errorWidget,
-      BoxFit? fit,
-      Color? color,
-      Widget? placeholder}) {
+  static Widget getNetworkImg({
+    required String? imageUrl,
+    double? height,
+    double? width,
+    BoxFit? fit,
+    Color? color,
+  }) {
     return CachedNetworkImage(
-        imageUrl: '',
+        imageUrl: imageUrl ?? '',
         fit: fit ?? BoxFit.cover,
         color: color,
         width: width,
-        placeholder: (context, url) => placeholder ?? Container(),
-        errorWidget: (context, url, error) =>
-            errorWidget ??
-            Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: AppColor.darkWhite,
-              padding: const EdgeInsets.all(25),
-              child: Image.asset(
-                Assets.images.logoCinex.path,
-                color: Colors.grey,
-              ),
-            ));
+        placeholder: (context, url) => const AppLoading(),
+        errorWidget: (context, url, error) => const Icon(Icons.error));
   }
 }

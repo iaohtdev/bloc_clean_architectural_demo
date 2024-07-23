@@ -6,7 +6,8 @@ class AppTheme {
       fontFamily: AppTextStyles.fontRegular,
       colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       useMaterial3: true,
-      scaffoldBackgroundColor: Colors.black,
-      appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.black, surfaceTintColor: Colors.black));
+      scaffoldBackgroundColor: Colors.white,
+      appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white.withOpacity(0.9),
+          surfaceTintColor: Colors.white));
 }
